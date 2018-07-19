@@ -28,7 +28,7 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents
-    self.notes.pluck(content: content)
+    self.notes.pluck(:content)
   end
 
 end
