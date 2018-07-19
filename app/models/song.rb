@@ -29,6 +29,7 @@ class Song < ActiveRecord::Base
 
   def note_contents
     self.notes.map(&:content) #& means that you are passing a block
+
     # self.notes.map(&:content.to_proc).join(' ')
     # self.notes.each { |content| content}
     # self.notes.pluck(:content)
