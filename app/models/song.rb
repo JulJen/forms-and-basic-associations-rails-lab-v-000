@@ -29,6 +29,7 @@ class Song < ActiveRecord::Base
 
   def note_contents
     self.notes.map { |content| content}
+    # self.notes.pluck(:content)
   end
 
 end
