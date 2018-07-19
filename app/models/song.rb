@@ -23,9 +23,9 @@ class Song < ActiveRecord::Base
     notes.each do |content|
       if content.strip != ''
         @song = self.notes.build(content: content)
-      end 
+      end
     end
-  end 
+  end
 
   def note_contents
     self.notes.map { |content, v| content, v}
